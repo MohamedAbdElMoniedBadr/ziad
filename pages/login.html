@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta -name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <!-- Vendor Css Files -->
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="../css/boxicons/css/boxicons.min.css" />
+    <link rel="stylesheet" href="../css/aos.css" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="../assets/images/calendar-3.png"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/style-1.css" />
+    <link rel="stylesheet" href="../css/login.css" />
+  </head>
+  <body style="background-color: white">
+    <!-- Start Navbar -->
+    <div class="nav-bar">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark p-0">
+          <a class="navbar-brand" href="home.html"
+            ><img src="../assets/images/calendar-3.png" alt="The Icon"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav m-auto2">
+              <li class="nav-item">
+                <a class="nav-link" href="home.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Book_Shelf.html">Manga Store</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="cart.html">The Cart</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="login.html">Log In</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <!-- End Navbar -->
+    <div class="form">
+      <h1>Welcome Back!</h1>
+      <form
+        role="form"
+        action="/login"
+        method="POST"
+        name="login"
+        accept-charset="UTF-8"
+        enctype="application/x-www-form-urlencoded"
+        autocomplete="off"
+      >
+        <div class="field-wrap">
+          <div class="form-group input-group">
+            <span id="basic-addon1" class="input-group-addon"
+              ><span class="glyphicon glyphicon-user"></span
+            ></span>
+            <input
+              type="text"
+              name="username"
+              placeholder="Username"
+              aria-describedby="basic-addon1"
+              class="form-control"
+            />
+          </div>
+        </div>
+
+        <div class="field-wrap">
+          <div class="form-group input-group">
+            <span id="basic-addon2" class="input-group-addon"
+              ><span class="glyphicon glyphicon-lock"></span
+            ></span>
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              aria-describedby="basic-addon2"
+              autocomplete="off"
+              class="form-control"
+            />
+          </div>
+        </div>
+        <p class="forgot"><a href="/forgot">Forgot Password?</a></p>
+        <button
+          type="button"
+          class="btn btn-danger button button-block"
+          onclick="logIn()"
+        >
+          Log In
+        </button>
+      </form>
+    </div>
+
+    <div class="form">
+      <form
+        role="form"
+        action="/signup"
+        ,
+        method="POST"
+        ,
+        name="signup"
+        ,
+        accept-charset="UTF-8"
+        ,
+        enctype="application/x-www-form-urlencoded"
+        ,
+        autocomplete="off"
+      >
+        <div class="field-wrap">
+          <div class="form-group input-group">
+            <span class="input-group-addon" id="basic-addon1"
+              ><span class="glyphicon glyphicon-tags"></span
+            ></span>
+            <input
+              type="text"
+              name="firstname"
+              class="form-control"
+              placeholder="First Name *"
+              aria-describedby="basic-addon1"
+            />
+
+            <span class="input-group-addon" id="basic-addon1"
+              ><span class="glyphicon glyphicon-tags"></span
+            ></span>
+            <input
+              type="text"
+              name="lastname"
+              class="form-control"
+              placeholder="Last Name *"
+              aria-describedby="basic-addon1"
+            />
+          </div>
+        </div>
+
+        <div class="field-wrap">
+          <div class="form-group input-group">
+            <span class="input-group-addon" id="basic-addon1"
+              ><span class="glyphicon glyphicon-user"></span
+            ></span>
+            <input
+              type="text"
+              name="username"
+              class="form-control"
+              placeholder="Username *"
+              aria-describedby="basic-addon1"
+            />
+
+            <span class="input-group-addon" id="basic-addon1"
+              ><span class="glyphicon glyphicon-envelope"></span
+            ></span>
+            <input
+              type="text"
+              name="email"
+              class="form-control"
+              placeholder="E-Mail *"
+              aria-describedby="basic-addon1"
+            />
+          </div>
+        </div>
+
+        <div class="field-wrap">
+          <div class="form-group input-group">
+            <span class="input-group-addon" id="basic-addon2"
+              ><span class="glyphicon glyphicon-lock"></span
+            ></span>
+            <input
+              type="password"
+              name="password"
+              class="form-control"
+              placeholder="Password *"
+              aria-describedby="basic-addon2"
+              ,
+              autocomplete="off"
+            />
+
+            <span class="input-group-addon" id="basic-addon2"
+              ><span class="glyphicon glyphicon-lock"></span
+            ></span>
+            <input
+              type="password"
+              name="password2"
+              class="form-control"
+              placeholder="Comfirm Password *"
+              aria-describedby="basic-addon2"
+              ,
+              autocomplete="off"
+            />
+          </div>
+        </div>
+
+        <button
+          type="button"
+          class="button button-block btn btn-danger"
+          onclick="regUser()"
+        >
+          Register
+        </button>
+      </form>
+    </div>
+    <!-- Start Footer -->
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-12 col-sm-12 col-12">
+            <hr />
+            <div class="row p-0">
+              <div
+                class="col-9 pl-0"
+                data-aos="zoom-in-down"
+                data-aos-duration="800"
+              >
+                <div class="title">Learn About Us</div>
+                <p>
+                  The quick, brown fox jumps over a lazy dog. DJs flock by when
+                  MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds
+                  jog, flick quartz, vex nymphs. Waltz, bad nymph, for quick
+                  jigs vex! Fox nymphs grab driven jocks help fax my big quiz.
+                  Quick, Baz, get my woven flax jodhpurs! "Now fax quiz Jack!"
+                  my brave ghost pled. Five quacking zephyrs jolt my wax bed.
+                  Flummoxed by job, kvetching W. zaps Iraq. Cozy sphinx waves
+                  quart jug of.
+                </p>
+              </div>
+              <div
+                class="col-3"
+                data-aos="zoom-in-down"
+                data-aos-delay="100"
+                data-aos-duration="800"
+              >
+                <div class="title">Links</div>
+                <ul>
+                  <li><a href="home.html">Home</a></li>
+                  <li><a href="volunteers.html">Manga Store</a></li>
+                  <li><a href="contactUs.html">Log In</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-lg-4 col-md-12 col-sm-12 col-12 mt-lg-0 mt-md-4 mt-sm-4 mt-4 text-center"
+          >
+            <video
+              data-aos="zoom-in-down"
+              data-aos-delay="100"
+              data-aos-duration="700"
+              controls
+              src=""
+              poster="../assets/images/romance-novels-2000.jpg"
+            ></video>
+            <div class="icons text-center">
+              <a
+                data-aos="zoom-in-right"
+                data-aos-delay="100"
+                data-aos-duration="700"
+                href="#"
+                ><i class="bx bxl-google-plus"></i
+              ></a>
+              <a
+                data-aos="zoom-in-right"
+                data-aos-delay="200"
+                data-aos-duration="700"
+                href="#"
+                ><i class="bx bxl-twitter"></i
+              ></a>
+              <a
+                data-aos="zoom-in-right"
+                data-aos-delay="300"
+                data-aos-duration="700"
+                href="#"
+                ><i class="bx bxl-facebook"></i
+              ></a>
+              <a
+                data-aos="zoom-in-right"
+                data-aos-delay="400"
+                data-aos-duration="700"
+                href="#"
+                ><i class="bx bxl-linkedin"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Footer -->
+    <!-- --------------------------------------- -->
+    <!-- --------------------------------------- -->
+    <!-- Start Scrolltop -->
+    <i class="scroll bx bxs-up-arrow"></i>
+    <!-- End Scrolltop -->
+    <!-- --------------------------------------- -->
+    <!-- Start Loading -->
+    <div class="box-loading">
+      <div class="loader">
+        <div class="inner one"></div>
+        <div class="inner two"></div>
+        <div class="inner three"></div>
+      </div>
+    </div>
+    <!-- End Loading -->
+    <!-- --------------------------------------- -->
+    <!-- Vendor Js Files -->
+    <script src="../JS/jquery.min.js"></script>
+    <script src="../JS/popper.min.js"></script>
+    <script src="../JS/bootstrap.js"></script>
+    <script src="../JS/owl.carousel.min.js"></script>
+    <script src="../JS/aos.js"></script>
+    <script src="../js/login.js"></script>
+
+    <!-- Main Js Files -->
+    <script src="../JS/main.js"></script>
+  </body>
+</html>
